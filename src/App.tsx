@@ -4,6 +4,13 @@ import "./styles.css";
 import { Todo } from "./Todo";
 import { TodoType } from "./types/todo";
 import { Text } from "./Text";
+import { UserProfile } from "./UserPrifile";
+import { User } from "./types/user";
+
+const user: User = {
+  name: "かがえ"
+  // hobbies: ["映画", "まんが"]
+};
 
 export default function App() {
   // todosを[](空配列)で初期化
@@ -24,6 +31,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <UserProfile user={user} />
       <Text color="red" fontSize="30px" />
       <button onClick={onClickFetchData}>データ取得</button>
       {todos.map((todo) => (
