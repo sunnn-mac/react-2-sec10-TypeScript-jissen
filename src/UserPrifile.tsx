@@ -7,7 +7,7 @@ type Props = {
 
 //  join 配列を　/ で連結する joinはjavascriptの関数
 // ? : オプショナルチェイニング オブジェクトの要素がない時点で、
-//     undefinedを返して、落ちないようにする
+//     undefinedを返して、例外にならないようにする
 export const UserProfile: VFC<Props> = (props) => {
   const { user } = props;
   return (
